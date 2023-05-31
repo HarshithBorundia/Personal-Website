@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Borundia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+        </style>
+        <script src="https://kit.fontawesome.com/be7a46752d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header" >
+       <div class="container">
+        <nav>
+            <img src="image3.jpg" class="logo">
+            <ul>
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#courses">Courses</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <i class="fa-solid fa-xmark fa-xl"></i>
+            </ul>
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </nav>
+        <div class="header-text">
+            <p>Student at BITS Pilani</p>
+            <h1>Hi, I am <span>Harshith Borundia</span>.</h1>
+        </div>
+       </div>
+    </div>
+    <!-- About section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                      <img src="image1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>  
+                    <p class="about-me">
+                          I am currently pursuing my MSc in Economics and Computer Science Engineering. I am in my third year of studies, and I have a great passion for both finance and mathematics.
+                          Aside from my academic pursuits, I have a background in sports. I played cricket for six years and had the privilege of participating in the Hyderabad Association Leagues. I bowled right-arm off-breaks. My best figures were 4/5. The experience of being part of a team, competing, and learning valuable lessons about teamwork and discipline has greatly shaped my character.
+                    </p> 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                            Education
+                        </p>
+                    </div>
+                    <div class="tab-contents active-tab " id="skills">
+                        <ul>
+                            <li>
+                                <span>Front-end Development:</span> Building websites and web-applications
+                            </li>
+                            <li>
+                                <span>Financial and Risk Analysis:</span> Making capital budgeting decisions and using different techniques to analyse risk in investments 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li>
+                                <span>2023: </span>Internship at Indian Institute of Remote Sensing, Dehradun
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2021-2026: </span>MsC Economics
+                            </li>
+                            <li>
+                                <span>2021-2026: </span>Computer Science Engineering
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="courses">
+        <div class="container">
+            <h1 class="sub-title">
+                    My Courses     
+            </h1>
+            <div class="courses-list">
+                
+                <div>
+                    
+                    <h2 class="course-title">
+                        Economics courses 
+                        
+                    </h2>
+                    <p>
+                       1. Mathematical & Statistical Methods<br>2. Econometrics<br> 3. Fundamentals of Finance and Accounting <br> 4. Financial Management <br>5. Microeconomics <br>6. Principles of Management
+                    </p>
+                </div>
+                <div>
+                    <h2 class="course-title">
+                        Computer Science courses
+                    </h2>
+                    <p>
+                        1. Computer Programming
+                    </p>
+                </div>
+                <div>
+                    <h2 class="course-title">
+                        Additional courses
+                    </h2>
+                    <p>
+                      1. Mathematics 1<br>2. Mathematics 2<br>3. Mathematics 3 <br> 4. Probability & Statistics
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-envelope fa-xl"></i>f20210727@hyderabd.bits-pilani.ac.in</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/harshith-borundia-333828111/"><i class="fa-brands fa-linkedin fa-xl" style="color: #0f6ce6;"></i></a>
+                        <a href="https://twitter.com/hbhbhbh28"><i class="fa-brands fa-twitter fa-xl" style="color: #1695e3;"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                     <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email"placeholder="Your email" required>
+                        <textarea name="Message"rows="6"placeholder="Your Message"></textarea> 
+                        <button type="submit" class="btn btn2">Submit</button>
+                     </form>
+                     <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzmJi1odwQ5IgbqaaBZu_Ps4GW_hZElilUXde59EZA_t5PLFfB-bECmwvcFfhVmP1h-/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{ msg.innerHTML="Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+
+            },2000)
+            form.reset()})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
